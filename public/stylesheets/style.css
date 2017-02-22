@@ -1,0 +1,170 @@
+* {
+	margin: 0;
+	padding: 0;
+	outline: none;
+	user-select: none;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+}
+body {
+	background-color: rgb(33,28,22);
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+#block {
+	display: block;
+	margin: auto;
+	overflow: auto;
+	position: absolute;
+	top: 15%;
+	right: 0;
+	left: 0;
+}
+#countDown {
+	width: 318px;
+	padding-left: 9px;	
+	margin: auto;
+	overflow: auto;
+	position: absolute;
+	top: 75%;
+	right: 0;
+	left: 0;
+}
+#timeInput {
+	text-align: center;
+	width: 142px;
+	height: 32px;
+	line-height: 32px;	
+	font-size: 15px;
+	border: 2px solid white;
+	border-radius: 50px;
+	background-color: rgb(27,22,19);
+	color: white;
+}
+#timingBtn {
+    display: inline-block;
+	position: relative;
+	width: 146px;
+	bottom: 1px;
+	margin: 0 10px;
+    padding: 9px 31px;
+    border-radius: 50px;
+    font-weight: bold;
+    color: white;
+	border: solid 2px #FFF;
+	cursor: pointer;
+
+    transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+}
+#timingBtn.setCountDown {
+	background-color: rgb(27,22,19);
+}
+#timingBtn.setCountDown:hover {
+	background-color: white;
+	color: rgb(27,22,19);
+	border-color: rgb(27,22,19);
+}
+#timingBtn.terminateCountDown {
+	background-color: rgb(20,120,255);
+}
+#timingBtn.terminateCountDown:hover {
+	background-color: white;
+	color: rgb(20,120,255);
+	border-color: rgb(20,120,255);
+}
+
+#visualization {
+	position: relative;
+}
+#musicList {
+	position: absolute;
+	top: 80px;
+	left: 50px;
+	width: 200px;
+	height: 500px;
+	font-size: 15px;
+	font-weight: bold;
+	line-height: 30px;
+	color: white;
+}
+#musicList ul li {
+	cursor: pointer;
+	list-style: none;
+	text-decoration: none;
+}
+#musicList ul li.selected {
+	color: rgb(20,120,255);
+}
+
+/*音量条*/
+#musicList p {
+	margin-bottom: 10px;
+}
+input[type="range"] {
+	-webkit-appearance: none;
+	height: 8px;
+	background-color: #999;
+	border-radius: 10px;
+	outline: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	width: 12px;
+	height: 12px;
+	background-color: #fff;
+	border-radius: 100%;
+}
+input[type="range"]::-moz-range-track {
+	height: 8px;
+	background-color: #999;
+	border-radius: 10px;
+	outline: none;
+}
+input[type="range"]::-moz-range-thumb {
+	width: 12px;
+	height: 12px;
+	background-color: #fff;
+	border-radius: 100%;
+}
+
+/*倒计时完毕的提示*/
+#hint {
+	display: none;
+	text-decoration: none;
+	text-align: center;
+	position: absolute;
+	margin: auto;
+	padding: 30px;
+	overflow: auto;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 300px;
+	height: 150px;
+	background-color: white;
+	border: 2px solid rgb(20,120,255);
+	border-radius: 30px;
+	font-size: 40px;
+	font-weight: 700;
+}
+#hintBtn {
+	position: relative;
+	bottom: -60px;
+	left: 100px;
+	width: 100px;
+	height: 30px;
+	border: 2px solid rgb(20,120,255);
+	border-radius: 10px;
+	background-color: white;
+	font-size: 15px;
+	font-weight: 600;
+	color: rgb(20,120,255);
+	cursor: pointer;
+}
+#hintBtn:hover {
+	background-color: rgb(20,120,255);
+	color: white;
+}

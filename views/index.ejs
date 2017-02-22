@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
+</head>
+<body>
+	<canvas id="block">
+		不支持canvas
+	</canvas>
+	<canvas id="visualization">
+		
+	</canvas>
+	<div id="hint">
+		Time out !!!
+		<button id="hintBtn">确定</button>
+	</div>
+	<div id="countDown">
+		<input id="timeInput" type="text" name="count" placeholder="(Unit:minute)">
+		<button id="timingBtn" class="setCountDown">Set the clock</button>
+	</div>
+	<div id="musicList">
+		<p>
+			Volume <input id="volume" type="range" min="0" max="100" value="20">
+		</p>
+		<ul>
+			<% music.forEach(function(name) { %>
+				<li title="<%= name %>"><%= name %></li>
+			<% }) %>
+		</ul>
+	</div>
+
+	<script type="text/javascript" src="javascripts/MusicVisualizer.js"></script>
+	<script type="text/javascript" src="javascripts/index.js"></script>
+	<script type="text/javascript" src="javascripts/clock.js"></script>
+</body>
+</html>
